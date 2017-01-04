@@ -1,1 +1,15 @@
 <h1>Please create your Hero!</h1>
+
+
+<!--Character Creation Form -->
+<%= form_for @article do |f| %>
+    <p>
+        <%= f.label :name %><br/>
+        <%= f.text_field :name %>
+    </p>
+    <p>
+        <%= f.label :race %><br/>
+        <%= f.select :race, [['human', 1], ['elf', 2], ['orc', 3]] %>
+    </p>
+
+<% end %>
